@@ -1,7 +1,5 @@
-require "./payment/*"
-
-module Payment
-  def self.calculate(advance : Float64, balloon : Float64, rate : Float64, term : Int32, loan_type = 0)
+module Finance
+  def self.payment(advance : Float64, balloon : Float64, rate : Float64, term : Int32, loan_type = 0)
     # Excel PMT function: =PMT((9.3/100)/12,36,-12995,6000,0)
     payment = 0.00
     advance_minus_balloon = advance - balloon
