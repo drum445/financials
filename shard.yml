@@ -1,0 +1,9 @@
+name: payment
+version: 0.1.0
+
+authors:
+  - ed <humdrum375@gmail.com>
+
+crystal: 0.24.2
+
+license: MIT
