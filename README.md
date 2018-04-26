@@ -16,6 +16,8 @@ dependencies:
 
 ```crystal
 require "payment"
+# Excel PMT function: =PMT((9.3/100)/12,36,-12995,6000,0)
+puts Payment.calculate(12995.0, 6000.0, 9.3, 36, 0)
 ```
 
 TODO: Write usage instructions here
