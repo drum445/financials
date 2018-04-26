@@ -9,7 +9,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   payment:
-    github: [your-github-name]/payment
+    github: drum445/payment
 ```
 
 ## Usage
