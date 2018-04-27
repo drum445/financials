@@ -1,2 +1,2 @@
 require "spec"
-require "../src/payment"
+require "../src/finance"
