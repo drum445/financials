@@ -16,8 +16,17 @@ dependencies:
 
 ```crystal
 require "finance"
+```
+
+##### Payment
+```crystal
 # Excel PMT function: =PMT((9.3/100)/12,36,-12995,6000,0)
 puts Finance.payment(12995.0, 6000.0, 9.3, 36, 0) # => 269.92
+```
+##### Present Value
+```crystal
+# Excel PMT function: =PV((9.3/100)/12,36,350.50,1000,0)
+puts Finance.pv(9.3, 36, 350.50, 1000.00, 0) # => £11,731.21
 ```
 
 ## Contributing

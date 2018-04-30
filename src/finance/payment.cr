@@ -12,7 +12,7 @@ module Finance
       payment = (advance_minus_balloon * (rate_per_annum * rate_to_term)) / (rate_to_term - 1)
 
       balloon_rate = balloon * rate_per_annum
-      payment = (payment + balloon_rate).round(2)
+      payment = (payment + balloon_rate)
 
       # loan type is when the payment is being paid
       # 0 == end of month (default), 1 == start of month
@@ -22,6 +22,6 @@ module Finance
       end
     end
 
-    return payment
+    return payment.round(2)
   end
 end
