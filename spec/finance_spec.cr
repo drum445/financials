@@ -2,10 +2,10 @@ require "./spec_helper"
 
 describe "Payment" do
   it "Calculates PMT" do
-    payment_0 = Finance.payment(12995.0, 6000.0, 9.3, 36, 0)
+    payment_0 = Finance.payment(9.3, 36, 12995.0, 6000.0, 0)
     payment_0.should eq(269.92)
 
-    payment_1 = Finance.payment(12995.0, 6000.0, 9.3, 36, 1)
+    payment_1 = Finance.payment(9.3, 36, 12995.0, 6000.0, 1)
     payment_1.should eq(267.84)
   end
 end
