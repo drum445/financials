@@ -21,18 +21,18 @@ require "finance"
 ##### Payment
 ```crystal
 # Excel PMT function: =PMT((9.3/100)/12,36,-12995,6000,0)
-puts Finance.payment(9.3, 36, 12995.0, 6000.0, 0) # => 269.92
+puts Finance.payment(9.3, 36, 12995, 6000, 0) # => 269.92
 
 # Excel PMT function: =PMT((9.3/100)/12,36,-12995,6000,1)
-puts Finance.payment(9.3, 36, 12995.0, 6000.0, 1) # => 267.84
+puts Finance.payment(9.3, 36, 12995, 6000, 1) # => 267.84
 ```
 ##### Present Value
 ```crystal
 # Excel PMT function: =PV((9.3/100)/12,36,350.50,1000,0)
-puts Finance.pv(9.3, 36, 350.50, 1000.00, 0) # => 11731.21
+puts Finance.pv(9.3, 36, 350.50, 1000, 0) # => 11731.21
 
 # Excel PMT function: =PV((9.3/100)/12,36,350.50,1000,1)
-puts Finance.pv(9.3, 36, 350.50, 1000.00, 1) # => 11816.26
+puts Finance.pv(9.3, 36, 350.50, 1000, 1) # => 11816.26
 ```
 
 ## Contributing
