@@ -7,7 +7,7 @@ module Finance
     return (future_value + payment*(1 + rate*loan_type)*(((1 + rate) ** term) - 1)/rate)
   end
 
-  def self.pv(rate : Float64, term : Int32, payment : Float64, future_value = 0.0, loan_type = 0)
+  def self.pv(rate : Float64, term : Int32, payment : Float64, future_value : Float64 = 0, loan_type = 0)
     rate_per_anum = ((rate / 100) / 12)
 
     annuity = pv_annuity(rate_per_anum, term, payment, future_value, loan_type)
