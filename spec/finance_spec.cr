@@ -13,9 +13,9 @@ end
 describe "Present Value" do
   it "Calculates PV" do
     pv_0 = Finance.pv(120.00, 1, 100.00, 100.00, 0)
-    pv_0.should eq(181.82)
+    pv_0.should eq(-181.82)
 
     pv_1 = Finance.pv(120.00, 1, 100.00, 100.00, 1)
-    pv_1.should eq(190.91)
+    pv_1.should eq(-190.91)
   end
 end

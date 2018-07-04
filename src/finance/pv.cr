@@ -12,7 +12,7 @@ module Finance
 
     annuity = pv_annuity(rate_per_anum, term, payment, future_value, loan_type)
     fv = pv_f(rate_per_anum, term)
-    pv = annuity / fv
+    pv = -1 * (annuity / fv)
 
     return pv.round(2)
   end
