@@ -53,6 +53,14 @@ puts Finance.fv(5.8, 48, 2265.63, -133781.21, 1) # => 45960.0
 # Excel function: =FV((10/100)/12,36,2625.73,-81374.62,0)
 puts Finance.fv(10, 36, 2625.73, -81374.62, 0) # => 0.0
 ```
+##### Rate - Returns Float64
+```crystal
+# Excel function: =RATE(60,1600,-75304.59,0) * 12 * 100
+puts Finance.rate(60, 1600, -75304.59, 0) # => 10.0
+
+# Excel function: =RATE(30,4337.33,-112072.94,0) * 12 * 100
+puts Finance.rate(30, 4337.33, -112072.94, 0) # => 11.9
+```
 
 ## Contributing
 

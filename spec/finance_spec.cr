@@ -42,3 +42,13 @@ describe "FV" do
     fv_2.should eq(0)    
   end  
 end
+
+describe "Rate" do
+  it "Calculates Rate" do
+    rate_0 = Finance.rate(60, 1600, -75304.59, 0)
+    rate_0.should eq(10.0)
+
+    rate_1 = Finance.rate(30, 4337.33, -112072.94, 0)
+    rate_1.should eq(11.9) 
+  end  
+end
