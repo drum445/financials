@@ -60,6 +60,9 @@ puts Finance.rate(60, 1600, -75304.59, 0) # => 10.0
 
 # Excel function: =RATE(30,4337.33,-112072.94,0) * 12 * 100
 puts Finance.rate(30, 4337.33, -112072.94, 0) # => 11.9
+
+# Excel function: =RATE(18,1909.53,-103616.44,77477) * 12 * 100
+puts Finance.rate(18,1909.53,-103616.44,77477) # => 6.0
 ```
 
 ## Contributing
