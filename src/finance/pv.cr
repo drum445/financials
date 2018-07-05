@@ -1,17 +1,17 @@
 module Finance
-  private def self.pv_f(rate : Float64, term : Int32)
-    return ((1 + rate) ** term)
+  private def self.pv_f(rate : Float64, nper : Int32)
+    return ((1 + rate) ** nper)
   end
 
-  private def self.pv_annuity(rate : Float64, term : Int32, payment : Float64, future_value : Float64, loan_type : Int32)
-    return (future_value + payment*(1 + rate*loan_type)*(((1 + rate) ** term) - 1)/rate)
+  private def self.pv_annuity(rate : Float64, nper : Int32, pmt : Float64, fv : Float64, loan_type : Int32)
+    return (fv + pmt*(1 + rate*loan_type)*(((1 + rate) ** nper) - 1)/rate)
   end
 
-  def self.pv(rate : Float64, term : Int32, payment : Float64, future_value : Float64 = 0, loan_type = 0)
+  def self.pv(rate : Float64, nper : Int32, pmt : Float64, fv : Float64 = 0, loan_type = 0)
     rate_per_anum = ((rate / 100) / 12)
 
-    annuity = pv_annuity(rate_per_anum, term, payment, future_value, loan_type)
-    fv = pv_f(rate_per_anum, term)
+    annuity = pv_annuity(rate_per_anum, nper, pmt, fv, loan_type)
+    fv = pv_f(rate_per_anum, nper)
     pv = -1 * (annuity / fv)
 
     return pv.round(2)

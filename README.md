@@ -18,21 +18,40 @@ dependencies:
 require "finance"
 ```
 
-##### Payment
+##### Payment - Returns Float64
 ```crystal
 # Excel function: =PMT((9.3/100)/12,36,-12995,6000,0)
-puts Finance.payment(9.3, 36, 12995, 6000, 0) # => 269.92
+puts Finance.pmt(9.3, 36, -12995, 6000, 0) # => 269.92
 
 # Excel function: =PMT((9.3/100)/12,36,-12995,6000,1)
-puts Finance.payment(9.3, 36, 12995, 6000, 1) # => 267.84
+puts Finance.pmt(9.3, 36, -12995, 6000, 1) # => 267.84
 ```
-##### Present Value
+##### Present Value - Returns Float64
 ```crystal
 # Excel function: =PV((9.3/100)/12,36,350.50,1000,0)
 puts Finance.pv(9.3, 36, 350.50, 1000, 0) # => -11731.21
 
 # Excel function: =PV((9.3/100)/12,36,350.50,1000,1)
 puts Finance.pv(9.3, 36, 350.50, 1000, 1) # => -11816.26
+```
+##### NPER - Returns Int32
+```crystal
+# Excel function: =NPER(10/100/12,2625.73,-81374.62,0,0)
+puts Finance.nper(10, 2625.73, -81374.62, 0, 0) # => 36
+
+# Excel function: =NPER(0/100/12,2625.73,-81374.62,0,1)
+puts Finance.nper(0, 2625.73, -81374.62, 0, 1) # => 31
+```
+##### Future Value - Returns Float64
+```crystal
+# Excel function: =FV((5.8/100)/12,48,2265.63,-133781.21,0)
+puts Finance.fv(5.8,48,2265.63,-133781.21,0) # => 46550.0
+
+# Excel function: =FV((5.8/100)/12,48,2265.63,-133781.21,1)
+puts Finance.fv(5.8, 48, 2265.63, -133781.21, 1) # => 45960.0
+
+# Excel function: =FV((10/100)/12,36,2625.73,-81374.62,0)
+puts Finance.fv(10, 36, 2625.73, -81374.62, 0) # => 0.0
 ```
 
 ## Contributing
