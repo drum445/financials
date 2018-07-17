@@ -8,11 +8,15 @@ module Finance
   end
 
   def self.pv(rate : Float64, nper : Int32, pmt : Float64, fv : Float64 = 0, loan_type = 0)
-    rate_per_anum = ((rate / 100) / 12)
+    if rate == 0.00
+      pv = -pmt * nper - fv
+    else
+      rate_per_anum = ((rate / 100) / 12)
 
-    annuity = pv_annuity(rate_per_anum, nper, pmt, fv, loan_type)
-    fv = pv_f(rate_per_anum, nper)
-    pv = -1 * (annuity / fv)
+      annuity = pv_annuity(rate_per_anum, nper, pmt, fv, loan_type)
+      fv = pv_f(rate_per_anum, nper)
+      pv = -1 * (annuity / fv)
+    end
 
     return pv.round(2)
   end
