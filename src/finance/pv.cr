@@ -18,7 +18,7 @@ module Finance
       pv = -1 * (annuity / fv)
     end
 
-    return pv.round(2)
+    return pv
   end
 end
 

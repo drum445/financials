@@ -7,7 +7,7 @@ module Finance
     pv_minus_fv = pv - fv
 
     if rate == 0.00
-      pmt = (pv_minus_fv / nper).round(2)
+      pmt = (pv_minus_fv / nper)
     else
       rate_per_annum = (rate / 100) / 12
       rate_to_nper = (rate_per_annum + 1) ** nper
@@ -24,6 +24,6 @@ module Finance
       end
     end
 
-    return pmt.round(2)
+    return pmt
   end
 end

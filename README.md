@@ -18,6 +18,8 @@ dependencies:
 require "finance"
 ```
 
+### Examples (shows rounded results)
+
 ##### Payment - Returns Float64
 ```crystal
 # Excel function: =PMT((9.3/100)/12,36,-12995,6000,0)
@@ -37,7 +39,7 @@ puts Finance.pv(0, 36, 350.50, 1000, 0) # => -13618.00
 # Excel function: =PV((9.3/100)/12,36,350.50,1000,1)
 puts Finance.pv(9.3, 36, 350.50, 1000, 1) # => -11816.26
 ```
-##### NPER - Returns Int32
+##### NPER - Returns Float64
 ```crystal
 # Excel function: =NPER(10/100/12,2625.73,-81374.62,0,0)
 puts Finance.nper(10, 2625.73, -81374.62, 0, 0) # => 36
