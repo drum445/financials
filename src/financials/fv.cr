@@ -1,4 +1,4 @@
-module Finance
+module Financials
   def self.fv(rate : Float64, nper : Int32, pmt : Float64, pv : Float64, loan_type = 0)
     if rate == 0.00
       return -1 * (pv + pmt * nper)

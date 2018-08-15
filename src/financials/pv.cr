@@ -1,4 +1,4 @@
-module Finance
+module Financials
   private def self.pv_f(rate : Float64, nper : Int32)
     return ((1 + rate) ** nper)
   end

@@ -1,4 +1,4 @@
-module Finance
+module Financials
   def self.pmt(rate : Float64, nper : Int32, pv : Float64, fv : Float64, loan_type = 0)
     # Excel PMT function: =PMT((9.3/100)/12,36,-12995,6000,0)
     # pv is also called present value

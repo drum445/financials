@@ -1,4 +1,4 @@
-module Finance
+module Financials
   def self.nper(rate : Float64, pmt : Float64, pv : Float64, fv : Float64, loan_type = 0)
     # Excel PMT function: =NPER(10/100/12,2625.73,-81374.62,0,0)
     if rate == 0.00

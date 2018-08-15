@@ -1,4 +1,4 @@
-module Finance
+module Financials
   def self.rate(nper : Int32, pmt : Float64, pv : Float64, fv : Float64, loan_type = 0, guess = 0.1)
     tolerancy = 1e-6
     close = false
