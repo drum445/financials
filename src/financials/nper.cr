@@ -5,10 +5,9 @@ module Financials
       return (-(pv + fv) / pmt)
     end
 
-    rate_per_annum = (rate / 100) / 12
-    num = pmt * (1 + rate_per_annum * loan_type) - fv * rate_per_annum
-    den = (pv * rate_per_annum + pmt * (1 + rate_per_annum * loan_type))
-    nper = Math.log10(num / den) / Math.log10(1 + rate_per_annum)
-    return nper
+    num = pmt * (1 + rate * loan_type) - fv * rate
+    den = (pv * rate + pmt * (1 + rate * loan_type))
+    nper = Math.log10(num / den) / Math.log10(1 + rate)
+    return nper.round(6)
   end
 end

@@ -12,7 +12,7 @@ module Financials
       guess = next_guess
     end
 
-    (next_guess * 12 * 100)
+    next_guess.round(6)
   end
 
   private def self.newton_iter(r, n, p, x, y, w)

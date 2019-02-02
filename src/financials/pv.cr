@@ -11,14 +11,12 @@ module Financials
     if rate == 0.00
       pv = -pmt * nper - fv
     else
-      rate_per_anum = ((rate / 100) / 12)
-
-      annuity = pv_annuity(rate_per_anum, nper, pmt, fv, loan_type)
-      fv = pv_f(rate_per_anum, nper)
+      annuity = pv_annuity(rate, nper, pmt, fv, loan_type)
+      fv = pv_f(rate, nper)
       pv = -1 * (annuity / fv)
     end
 
-    return pv
+    return pv.round(6)
   end
 end
 
